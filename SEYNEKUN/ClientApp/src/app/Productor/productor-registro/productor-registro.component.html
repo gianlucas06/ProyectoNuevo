@@ -29,27 +29,27 @@
           
           <div class="form-group">
             <label id="NumerodeCedulaLabel">Número de Cedula</label>
-            <input type="text" id="cedulaProductores" class="form-control"  placeholder="Digita tu cedula" />
+            <input type="text" id="cedulaProductores" name="cedula"class="form-control"  placeholder="Digita tu cedula" />
           </div>
           <div class="form-group">
             <label id="NombreProductoresLabel">Nombre Completo</label>
-            <input type="text" id="NombreProductores" class="form-control"  placeholder="Nombre Completo" />
+            <input type="text" id="NombreProductores" name="nombre" class="form-control"  placeholder="Nombre Completo" />
           </div>
           <div class="form-group">
             <label id="CodigoProductoresLabel">Código Productor</label>
-            <input type="text" id="CodigoProductores" class="form-control"  placeholder="Digite codigo" />
+            <input type="text" id="CodigoProductores" name="codigoProductor"class="form-control"  placeholder="Digite codigo" />
           </div>
           <div class="form-group">
             <label id="NumeroLabel">Número Telefónico</label>
-            <input type="text" id="Numero" class="form-control"  placeholder="Digite numero telefonico" />
+            <input type="text" id="Numero" name="numero" class="form-control"  placeholder="Digite numero telefonico" />
           </div>
           <div class="form-group">
             <label id="AfiliacionLabel">Afiliciacion a Salud</label>
-            <input type="text" id="Afiliacion" class="form-control"  placeholder="" />
+            <input type="text" id="Afiliacion" name="Afiliacion" class="form-control"  placeholder="" />
           </div>
           <div class="form-group">
             <label id="ActividadLabel">Actividad Principal de Ingreso</label>
-            <input type="text" id="Actividad" class="form-control"  placeholder="Campo requerido" />
+            <input type="text" id="Actividad" name="Actividad" class="form-control"  placeholder="Campo requerido" />
           </div>
           <button id="btnnext" (click)="next()" class="btn btn-primary">Next</button>
         
@@ -79,7 +79,8 @@
         </div>
         <div id="test-l-3" class="content text-center">
           <h2>Datos Familiares</h2>
-          <button id="btnsubmit" type="submit" class="btn btn-primary mt-5">Submit</button>
+          
+          <button id="btnsubmit" type="submit" (click)="add()"class="btn btn-primary mt-5">Submit</button>
         </div>
       </form>
     </div>

@@ -28,7 +28,7 @@ namespace SEYNEKUN
         {
             //Configurar cadena de Conexion con EF
             var connectionString=Configuration.GetConnectionString("DefaultConnection");
-            services.AddDbContext<ProductoAlmacenadoContext>(p=>p.UseSqlServer(connectionString));
+            services.AddDbContext<DatosContext>(p=>p.UseSqlServer(connectionString));
             services.AddControllersWithViews();
             services.AddSwaggerGen(c =>
 

@@ -19,6 +19,7 @@ import { AlertModalComponent } from './@base/alert-modal/alert-modal.component';
 import { ConocenosComponent } from './conocenos/conocenos.component';
 import { ProductorConsultaComponent } from './Productor/productor-consulta/productor-consulta.component';
 import { ProductorRegistroComponent } from './Productor/productor-registro/productor-registro.component';
+import { ProductorService } from './services/productor.service';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,7 @@ import { ProductorRegistroComponent } from './Productor/productor-registro/produ
     AppRoutingModule
   ],
   entryComponents:[AlertModalComponent],
-  providers: [PanelaService],
+  providers: [PanelaService,ProductorService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

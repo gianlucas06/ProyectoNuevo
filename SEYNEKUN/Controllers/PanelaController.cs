@@ -18,7 +18,7 @@ namespace SEYNEKUN.Controllers
     {
         private readonly PanelaService _panelaService;
         public IConfiguration Configuration { get; }
-        public PanelaController(ProductoAlmacenadoContext _context)
+        public PanelaController(DatosContext _context)
         {
         
             _panelaService = new PanelaService(_context);

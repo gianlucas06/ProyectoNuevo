@@ -2,12 +2,13 @@ using Entity;
 using Microsoft.EntityFrameworkCore;
 namespace Datos
 {
-    public class ProductoAlmacenadoContext:DbContext 
+    public class DatosContext:DbContext 
     {
-        public ProductoAlmacenadoContext(DbContextOptions options) : base(options)
+        public DatosContext(DbContextOptions options) : base(options)
         {
             
         }
         public DbSet<Panela> AlmacenamientoProducto{get;set;}
+        public DbSet<Productor> Productores{get;set;}
     }
 }

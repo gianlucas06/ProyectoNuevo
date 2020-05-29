@@ -8,8 +8,8 @@ namespace Logica
 {
     public class PanelaService
     {
-        private readonly  ProductoAlmacenadoContext _context;
-        public PanelaService(ProductoAlmacenadoContext context)
+        private readonly  DatosContext _context;
+        public PanelaService(DatosContext context)
         {
             _context=context;
         }

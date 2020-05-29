@@ -23,12 +23,31 @@ namespace Datos.Migrations
                 {
                     table.PrimaryKey("PK_AlmacenamientoProducto", x => x.Idregistro);
                 });
+
+            migrationBuilder.CreateTable(
+                name: "Productores",
+                columns: table => new
+                {
+                    Cedula = table.Column<string>(nullable: false),
+                    Nombre = table.Column<string>(nullable: true),
+                    CodigoProductor = table.Column<string>(nullable: true),
+                    NumeroTelefonico = table.Column<string>(nullable: true),
+                    Afiliacion = table.Column<string>(nullable: true),
+                    Actividad = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Productores", x => x.Cedula);
+                });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
                 name: "AlmacenamientoProducto");
+
+            migrationBuilder.DropTable(
+                name: "Productores");
         }
     }
 }

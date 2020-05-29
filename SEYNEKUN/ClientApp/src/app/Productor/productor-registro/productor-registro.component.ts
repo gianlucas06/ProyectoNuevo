@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import Stepper from 'bs-stepper';
+import { Productor } from '../models/productor';
+import { ProductorService } from 'src/app/services/productor.service';
 
 @Component({
   selector: 'app-productor-registro',
@@ -13,8 +15,8 @@ export class ProductorRegistroComponent implements OnInit {
   secondFormGroup: FormGroup;
   private stepper: Stepper;
   
-
-  constructor(private _formBuilder: FormBuilder) { }
+productor: Productor;
+  constructor(private productorService:ProductorService,private _formBuilder: FormBuilder) { }
 
   ngOnInit() {
     this.firstFormGroup = this._formBuilder.group({
@@ -33,6 +35,19 @@ export class ProductorRegistroComponent implements OnInit {
   }
   onSubmit() {
     return false;
+  }
+  add(){
+    this.productorService.post(this.productor).subscribe(p => {
+
+      if (p != null) {
+      
+      alert('Persona creada!');
+      
+      this.productor= p;
+      
+      }
+      
+      });
   }
 
 }
